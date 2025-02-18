@@ -1,13 +1,44 @@
 import BackgroundParticles from "../utils/BackgroundParticles";
+import Typewriter from "typewriter-effect";
 
 const Home = () => {
   return (
     <>
-      <BackgroundParticles />
-      <div className="flex justify-center items-center h-screen bg-black">
-        <div className="relative w-64 h-64 flex justify-center items-center">
-          {/* Rotating Circular Border */}
-          <div className="absolute w-72 h-72 animate-spin-very-slow">
+      <div className="flex justify-center items-center h-screen bg-white relative px-28 text-black">
+        <BackgroundParticles />
+        {/* Left Side Content */}
+        <div className="text-left max-w-lg">
+          <h1 className="text-5xl font-bold">
+            Hi There, <br /> I&apos;m{" "}
+            <span className="bg-gradient-to-r from-yellow-400 to-orange-600 font-bold bg-clip-text text-transparent">Syaloni Barman</span>
+          </h1>
+          <p className="flex gap-2 italic text-2xl mt-2 font-semibold">
+            <span>I Am Into</span>
+            <span className="text-red-600">
+              <Typewriter
+                options={{
+                  strings: [
+                    "Frontend Development",
+                    "Web Development",
+                    "MERN Stack Development",
+                    "Backend Development",
+                    "Full Stack Development",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  delay: 100,
+                }}
+              />
+            </span>
+          </p>
+          <button className="mt-6 px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+            About Me ↓
+          </button>
+        </div>
+
+        {/* Right Side - Profile Image */}
+        <div className="relative w-72 h-72 flex justify-center items-center ml-12">
+          <div className="absolute w-80 h-80 animate-spin-very-slow">
             <svg
               className="w-full h-full"
               viewBox="0 0 200 200"
@@ -19,19 +50,17 @@ const Home = () => {
                 cy="100"
                 r="90"
                 stroke="#0099ff"
-                strokeWidth="2" // Thicker lines
+                strokeWidth="3"
                 strokeDasharray="40 10 20 30"
                 strokeLinecap="round"
                 fill="transparent"
               />
             </svg>
           </div>
-
-          {/* Profile Image - No Gap */}
           <img
             src="src/assets/heading.jpg"
             alt="Profile"
-            className="absolute h-64 w-64 object-cover rounded-full border-4 border-transparent shadow-lg"
+            className="absolute h-72 w-72 object-cover rounded-full border-4 border-transparent shadow-lg"
           />
         </div>
       </div>

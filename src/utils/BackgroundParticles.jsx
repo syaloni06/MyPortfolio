@@ -29,7 +29,7 @@ const BackgroundParticles = () => {
             options={{
               background: {
                 color: {
-                  value: "#fff",
+                  value: "transparent",
                 },
               },
               fpsLimit: 120,
