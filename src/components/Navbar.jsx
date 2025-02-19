@@ -17,18 +17,18 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full bg-white shadow-sm h-16 flex items-center fixed top-0 left-0 z-50">
+      <nav className="w-full bg-white dark:bg-black shadow-sm h-16 flex items-center fixed top-0 left-0 z-50">
         <div className="w-full h-full flex justify-between items-center px-6">
           {/* Logo */}
           <div className="flex gap-1 items-center font-bold text-2xl italic">
             <div className="text-black">&lt;</div>
-            <div className="bg-gradient-to-r from-sky-300 to-blue-500 text-transparent bg-clip-text">
+            <div className="bg-gradient-to-r from-sky-500 to-blue-800 text-transparent bg-clip-text">
               Syaloni Barman</div>
             <div>/&gt;</div>
           </div>
 
           {/* Navigation Links */}
-          <ul className="flex space-x-6">
+          <ul className="flex space-x-6 items-center dark:text-white">
             {navItems.map((item) => (
               <li key={item}>
                 <Link
@@ -47,7 +47,7 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
-            <li><DarkModeToggle></DarkModeToggle></li>
+            <li><DarkModeToggle /></li>
           </ul>
         </div>
       </nav>

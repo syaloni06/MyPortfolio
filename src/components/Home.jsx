@@ -8,13 +8,13 @@ const Home = () => {
         <BackgroundParticles />
         {/* Left Side Content */}
         <div className="text-left max-w-lg z-50">
-          <h1 className="text-5xl font-bold">
+          <h1 className="text-5xl font-bold dark:text-white">
             Hi There, <br /> I&apos;m{" "}
-            <span className="bg-gradient-to-r from-yellow-400 to-orange-600 font-bold bg-clip-text text-transparent">Syaloni Barman</span>
+            <span className="bg-gradient-to-r from-sky-500 to-blue-800 font-bold bg-clip-text text-transparent">Syaloni Barman</span>
           </h1>
           <p className="flex gap-2 italic text-2xl mt-2 font-semibold">
-            <span>I Am Into</span>
-            <span className="text-red-600">
+            <span className="dark:text-white">I Am Into</span>
+            <span className="text-yellow-400">
               <Typewriter
                 options={{
                   strings: [
@@ -31,7 +31,7 @@ const Home = () => {
               />
             </span>
           </p>
-          <button className="mt-6 px-6 py-3 bg-blue-500 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+          <button className="mt-6 px-6 py-3 bg-gradient-to-r from-sky-500 to-blue-800 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
             About Me ↓
           </button>
         </div>
