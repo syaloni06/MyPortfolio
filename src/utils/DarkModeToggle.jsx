@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { MdWbSunny } from "react-icons/md";
-import { MdDarkMode } from "react-icons/md";
+import { MdNightsStay } from "react-icons/md";
 const DarkModeToggle = () => {
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("theme") === "dark"
@@ -21,7 +21,7 @@ const DarkModeToggle = () => {
       {darkMode ? (
         <MdWbSunny className="text-3xl text-yellow-400" />
       ) : (
-        <MdDarkMode className="text-3xl" />
+        <MdNightsStay className="text-3xl" />
       )}
     </button>
   );
