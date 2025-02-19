@@ -47,23 +47,23 @@ const BackgroundParticles = () => {
                 },
                 modes: {
                   push: {
-                    quantity: 4,
+                    quantity: 2,
                   },
                   repulse: {
-                    distance: 200,
-                    duration: 0.4,
+                    distance: 100,
+                    duration: 0.2,
                   },
                 },
               },
               particles: {
                 color: {
-                  value: "#0099ff", // Changed to cyan
+                  value: "#05b2fc",
                 },
                 links: {
-                  color: "#0099ff", // Changed to cyan
+                  color: "#05b2fc", 
                   distance: 150,
                   enable: true,
-                  opacity: 0.5,
+                  opacity: 1,
                   width: 1,
                 },
                 move: {
@@ -72,16 +72,16 @@ const BackgroundParticles = () => {
                   outModes: {
                     default: "bounce",
                   },
-                  random: false,
-                  speed: 1.2,
+                  random: true,
+                  speed: 1.5,
                   straight: false,
                 },
                 number: {
                   density: {
                     enable: true,
-                    area: 800,
+                    area: 1400,
                   },
-                  value: 160,
+                  value: 250,
                 },
                 opacity: {
                   value: 0.5,

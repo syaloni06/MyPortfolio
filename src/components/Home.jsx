@@ -4,10 +4,10 @@ import Typewriter from "typewriter-effect";
 const Home = () => {
   return (
     <>
-      <div className="flex justify-center items-center h-screen bg-white relative px-28 text-black">
+      <div className="flex justify-center items-center h-screen bg-white dark:bg-black relative px-28 text-black">
         <BackgroundParticles />
         {/* Left Side Content */}
-        <div className="text-left max-w-lg">
+        <div className="text-left max-w-lg z-50">
           <h1 className="text-5xl font-bold">
             Hi There, <br /> I&apos;m{" "}
             <span className="bg-gradient-to-r from-yellow-400 to-orange-600 font-bold bg-clip-text text-transparent">Syaloni Barman</span>
@@ -31,7 +31,7 @@ const Home = () => {
               />
             </span>
           </p>
-          <button className="mt-6 px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+          <button className="mt-6 px-6 py-3 bg-blue-500 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
             About Me ↓
           </button>
         </div>

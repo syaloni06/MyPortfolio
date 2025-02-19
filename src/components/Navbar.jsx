@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
+import DarkModeToggle from "../utils/DarkModeToggle";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
@@ -46,6 +47,7 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+            <li><DarkModeToggle></DarkModeToggle></li>
           </ul>
         </div>
       </nav>
