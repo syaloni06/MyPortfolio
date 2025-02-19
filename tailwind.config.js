@@ -10,6 +10,9 @@ export default {
       animation: {
         'spin-very-slow': 'spin 10s linear infinite',
       },
+      colors: {
+        customBlue: "#0099ff", // Define your custom color
+      },
     },
   },
   plugins: [],
