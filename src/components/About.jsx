@@ -5,10 +5,10 @@ import ResumePDF from "../assets/Syaloni_Barman_Resume.pdf"; // Import PDF
 
 const About = ({ refProp }) => {
   return (
-    <div ref={refProp} className="h-screen dark:bg-black p-20">
-      <div className="flex flex-col md:flex-row px-20 gap-10 items-center justify-center">
+    <div ref={refProp} className="h-screen dark:bg-black p-20 z-40">
+      <div className="flex flex-col md:flex-row px-20 gap-10 items-center justify-center z-40">
         {/* Image Section */}
-        <div className="w-full md:w-1/3 flex justify-center relative">
+        <div className="w-full md:w-1/3 flex justify-center relative z-40">
           <img
             src={AboutMeImage}
             alt="About Me"
@@ -17,7 +17,7 @@ const About = ({ refProp }) => {
         </div>
 
         {/* Text Section */}
-        <div className="w-full md:w-2/3 flex flex-col gap-4 z-50">
+        <div className="w-full md:w-2/3 flex flex-col gap-4 z-40">
           <h2 className="text-5xl flex gap-4 italic bg-gradient-to-r from-sky-500 to-blue-800 font-bold bg-clip-text text-transparent">
             <BsPersonBoundingBox className="self-center text-4xl text-black dark:text-white" />
             About Me

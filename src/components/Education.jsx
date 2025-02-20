@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import { IoSchoolSharp } from "react-icons/io5";
 import { FaSchool } from "react-icons/fa";
+import { motion } from "framer-motion";
+
 const details = [
   {
     course: "Full Stack Developement Training Programme",
@@ -37,9 +39,9 @@ const Education = ({ refProp }) => {
     >
       {/* Title */}
       <h2 className="text-5xl flex gap-4 p-10 italic bg-gradient-to-r from-sky-500 to-blue-800 font-bold bg-clip-text text-transparent">
-              <IoSchoolSharp className="self-end text-black dark:text-white" />
-              My Education
-            </h2>
+        <IoSchoolSharp className="self-end text-black dark:text-white" />
+        My Education
+      </h2>
 
       {/* Timeline Container */}
       <div className="relative w-11/12 md:w-2/3">
@@ -47,17 +49,28 @@ const Education = ({ refProp }) => {
         <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-[5px] bg-gray-300"></div>
 
         {details.map((exp, index) => (
-          <div key={index} className="relative flex items-center mb-4">
+          <motion.div
+            key={index}
+            className="relative flex items-center mb-4"
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            viewport={{ once: false, amount: 0.2 }}
+          >
             {/* Icon (Centered on the Timeline) */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-white flex items-center justify-center border-2 border-blue-800 shadow-md">
-            <FaSchool className="text-xl text-blue-800"/>
+              <FaSchool className="text-xl text-blue-800"/>
             </div>
 
             {/* Experience Card with Attached Triangle */}
-            <div
+            <motion.div
               className={`relative w-[45%] p-3 bg-gradient-to-r from-sky-500 to-blue-800 text-white rounded-lg shadow-md ${
                 index % 2 === 0 ? "ml-auto text-left" : "mr-auto text-left"
               }`}
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              viewport={{ once: false, amount: 0.2 }}
             >
               {/* Triangle Attached to Card */}
               <div
@@ -71,8 +84,8 @@ const Education = ({ refProp }) => {
               <h3 className="text-xl italic font-bold">{exp.organization}</h3>
               <p className="text-sm italic font-bold">{exp.course}</p>
               <span className="text-xs italic font-bold opacity-80">{exp.duration}</span>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         ))}
       </div>
     </div>

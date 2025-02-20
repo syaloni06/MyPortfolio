@@ -31,7 +31,7 @@ function App() {
       {/* Pass scroll function to Navbar */}
       <Navbar scrollToSection={scrollToSection} refs={{ homeRef, aboutRef, educationRef, skillsRef, projectsRef, certificatesRef, contactRef }} />
 
-      <div ref={homeRef}><Home /></div>
+      <div ref={homeRef}><Home scrollToSection={scrollToSection} refs={{aboutRef}}/></div>
       <div ref={aboutRef}><About /></div>
       <div ref={skillsRef}><Skill /></div>
       <div ref={educationRef}><Education /></div>

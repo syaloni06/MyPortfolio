@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import BackgroundParticles from "../utils/BackgroundParticles";
 import Typewriter from "typewriter-effect";
 import { GrInstagram } from "react-icons/gr";
@@ -6,7 +7,7 @@ import { TbBrandGithubFilled } from "react-icons/tb";
 import { FaFacebookF } from "react-icons/fa";
 import { FaArrowCircleDown } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-const Home = () => {
+const Home = ({ scrollToSection, refs }) => {
   const links = [
     {
       href: "https://www.linkedin.com/in/syaloni-barman/",
@@ -31,7 +32,7 @@ const Home = () => {
       <div className="flex justify-center items-center h-screen bg-white dark:bg-black relative px-28 text-black">
         <BackgroundParticles />
         {/* Left Side Content */}
-        <div className="text-left max-w-lg z-50">
+        <div className="text-left max-w-lg z-40">
           <h1 className="text-5xl font-bold dark:text-white">
             Hi There, <br /> I&apos;m{" "}
             <span className="bg-gradient-to-r from-sky-500 to-blue-800 font-bold bg-clip-text text-transparent">
@@ -57,7 +58,7 @@ const Home = () => {
               />
             </span>
           </p>
-          <button className="mt-6 flex gap-2 px-4 py-2 bg-gradient-to-r from-sky-500 to-blue-800 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+          <button onClick={()=> scrollToSection(refs.aboutRef)} className="mt-6 flex gap-2 px-4 py-2 bg-gradient-to-r from-sky-500 to-blue-800 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
             About Me <FaArrowCircleDown className="self-center"/> 
           </button>
           <div className="flex mt-6 text-2xl text-customBlue space-x-6">

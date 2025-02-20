@@ -13,6 +13,7 @@ import {
 import { BiLogoVisualStudio, BiLogoNetlify } from "react-icons/bi";
 import { SiRender } from "react-icons/si";
 import { FaLaptopCode } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const skills = [
   { name: "ReactJS", icon: <FaReact className="text-sky-500" /> },
@@ -33,27 +34,44 @@ const skills = [
 
 const Skill = ({ refProp }) => {
   return (
-    <div
-      ref={refProp}
-      className="h-screen flex flex-col gap-8 items-center justify-center dark:bg-black"
-    >
-      <h2 className="text-5xl flex gap-4 italic bg-gradient-to-r from-sky-500 to-blue-800 font-bold bg-clip-text text-transparent">
-        <FaLaptopCode className="self-end text-black dark:text-white" />
-        Skills & Abilities
-      </h2>
-      <div className="flex flex-wrap justify-center gap-6 p-8 bg-gradient-to-r from-sky-200 to-blue-400 rounded-xl shadow-lg w-3/5">
-        {skills.map((skill, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center p-4 bg-black rounded-lg shadow-md text-white w-28"
-          >
-            <div className="text-4xl">{skill.icon}</div>
-            <span className="mt-2 text-lg font-semibold text-center">
-              {skill.name}
-            </span>
-          </div>
-        ))}
-      </div>
+    <div className="h-screen flex flex-col gap-8 items-center justify-center dark:bg-black z-40">
+      <motion.div
+        ref={refProp}
+        className="h-screen flex flex-col gap-8 items-center justify-center dark:bg-black"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: false, amount: 0.2 }}
+      >
+        <h2 className="text-5xl flex gap-4 italic bg-gradient-to-r from-sky-500 to-blue-800 font-bold bg-clip-text text-transparent z-40">
+          <FaLaptopCode className="self-end text-black dark:text-white" />
+          Skills & Abilities
+        </h2>
+
+        <motion.div
+          className="flex flex-wrap justify-center gap-6 p-8 bg-gradient-to-r from-sky-200 to-blue-400 rounded-xl shadow-lg w-3/5"
+          initial="hidden"
+          whileInView="visible"
+          transition={{ staggerChildren: 0.1 }}
+          viewport={{ once: false, amount: 0.2 }}
+        >
+          {skills.map((skill, index) => (
+            <motion.div
+              key={index}
+              className="flex flex-col items-center p-4 bg-black rounded-lg shadow-md text-white w-28 z-40"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: false, amount: 0.2 }}
+            >
+              <div className="text-4xl">{skill.icon}</div>
+              <span className="mt-2 text-lg font-semibold text-center">
+                {skill.name}
+              </span>
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
