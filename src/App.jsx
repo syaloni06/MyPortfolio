@@ -33,8 +33,8 @@ function App() {
 
       <div ref={homeRef}><Home /></div>
       <div ref={aboutRef}><About /></div>
-      <div ref={educationRef}><Education /></div>
       <div ref={skillsRef}><Skill /></div>
+      <div ref={educationRef}><Education /></div>
       <div ref={projectsRef}><Projects /></div>
       <div ref={certificatesRef}><Certification /></div>
       <div ref={contactRef}><Contact /></div>

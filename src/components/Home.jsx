@@ -5,6 +5,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { TbBrandGithubFilled } from "react-icons/tb";
 import { FaFacebookF } from "react-icons/fa";
 import { FaArrowCircleDown } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 const Home = () => {
   const links = [
     {
@@ -20,6 +21,10 @@ const Home = () => {
       href: "https://www.instagram.com/syalon_i/?hl=en",
       icon: <GrInstagram />,
     },
+    {
+      href: "mailto:syalonib@gmail.com",
+      icon: <SiGmail/>
+    }
   ];
   return (
     <>

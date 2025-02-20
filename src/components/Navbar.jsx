@@ -7,8 +7,8 @@ const Navbar = ({ scrollToSection, refs }) => {
 
   const navLinks = [
     { name: "About", ref: refs.aboutRef },
-    { name: "Education", ref: refs.educationRef },
     { name: "Skills", ref: refs.skillsRef },
+    { name: "Education", ref: refs.educationRef },
     { name: "Projects", ref: refs.projectsRef },
     { name: "Certificates", ref: refs.certificatesRef },
     { name: "Contact", ref: refs.contactRef },
