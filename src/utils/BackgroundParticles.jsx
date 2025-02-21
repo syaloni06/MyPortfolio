@@ -6,7 +6,6 @@ import { loadFull } from "tsparticles";
 const BackgroundParticles = () => {
     const [init, setInit] = useState(false);
     useEffect(() => {
-      console.log("init");
       initParticlesEngine(async (engine) => {
         await loadFull(engine);
       }).then(() => {

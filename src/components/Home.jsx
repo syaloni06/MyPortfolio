@@ -39,7 +39,7 @@ const Home = ({ scrollToSection, refs }) => {
               Syaloni Barman
             </span>
           </h1>
-          <p className="flex gap-2 italic text-2xl mt-2 font-semibold">
+          <div className="flex gap-2 italic text-2xl mt-2 font-semibold">
             <span className="dark:text-white">I Am Into</span>
             <span className="text-orange-500 dark:text-yellow-400">
               <Typewriter
@@ -57,7 +57,7 @@ const Home = ({ scrollToSection, refs }) => {
                 }}
               />
             </span>
-          </p>
+          </div>
           <button onClick={()=> scrollToSection(refs.aboutRef)} className="mt-6 flex gap-2 px-4 py-2 bg-gradient-to-r from-sky-500 to-blue-800 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
             About Me <FaArrowCircleDown className="self-center"/> 
           </button>

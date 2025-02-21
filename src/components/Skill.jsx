@@ -49,7 +49,7 @@ const Skill = ({ refProp }) => {
         </h2>
 
         <motion.div
-          className="flex flex-wrap justify-center gap-6 p-8 bg-gradient-to-r from-sky-200 to-blue-400 rounded-xl shadow-lg w-3/5"
+          className="flex flex-wrap justify-center gap-6 p-8 bg-gradient-to-r from-sky-200 to-blue-400 dark:from-sky-800 dark:to-blue-950 rounded-xl shadow-lg w-3/5"
           initial="hidden"
           whileInView="visible"
           transition={{ staggerChildren: 0.1 }}
