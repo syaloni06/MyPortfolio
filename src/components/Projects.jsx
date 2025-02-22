@@ -55,18 +55,18 @@ const Projects = ({ refProp }) => {
           return (
             <div
               key={index}
-              className="w-[335px] rounded-lg bg-gradient-to-r from-sky-200 to-blue-400 dark:from-sky-800 dark:to-blue-950 shadow-lg relative overflow-hidden group">
-              <img src={image} alt={name} className="w-full h-60 rounded-md" />
+              className="w-[300px] rounded-lg bg-gradient-to-r from-sky-400 to-blue-700 dark:from-sky-800 dark:to-blue-950 shadow-lg relative overflow-hidden group">
+              <img src={image} alt={name} className="w-full h-56 rounded-md" />
               <div>
-                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-sky-200 to-blue-400 dark:from-sky-800 dark:to-blue-950 text-white font-bold text-xl px-4 py-2">
+                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-sky-400 to-blue-700 dark:from-sky-800 dark:to-blue-950 text-white font-bold text-xl px-4 py-2">
                   {name}
                 </div>
                 <div>
-                  <div className="absolute bottom-[-100%] left-0 w-full bg-gradient-to-t from-sky-200 to-blue-400 dark:from-sky-800 dark:to-blue-950 transition-all duration-300 ease-in-out group-hover:bottom-0 p-4">
+                  <div className="absolute bottom-[-100%] left-0 w-full bg-gradient-to-t from-sky-400 to-blue-700 dark:from-sky-800 dark:to-blue-950 transition-all duration-300 ease-in-out group-hover:bottom-0 p-4">
                   <div className="w-full text-cyan-800 dark:text-amber-500 italic font-bold pb-2 text-xl">
                   {name}
                 </div>
-                    <p className="text-gray-800 dark:text-white text-xs font-semibold italic">
+                    <p className="text-white text-xs font-semibold italic">
                     {description}
                     </p>
                     <div className="mt-4 flex justify-between">
