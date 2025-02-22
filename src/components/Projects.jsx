@@ -5,34 +5,34 @@ import { FaEye } from "react-icons/fa6";
 
 const projects = [
   {
-    image: "src/assets/Youtube_Clone Preview.jpg",
+    image: "src/assets/projects/Youtube_Clone Preview.jpg",
     name: "Youtube Clone",
     code: "https://github.com/syaloni06/Youtube_Clone",
     description: "YouTube Clone is a React-powered app for seamless video streaming, authentication, and channel management with Redux and React Router."
   },
   {
-    image: "src/assets/Eventify preview.jpg",
+    image: "src/assets/projects/Eventify preview.jpg",
     name: "Eventify",
     preview: "https://eventifysyaloni.netlify.app/",
     code: "https://github.com/syaloni06/Eventify",
     description: "Eventify is a powerful, user-friendly platform for effortless event creation, management, and participation."
   },
   {
-    image: "src/assets/ShoppyGlobe Preview.jpg",
+    image: "src/assets/projects/ShoppyGlobe Preview.jpg",
     name: "ShopyGlobe",
     preview: "https://shoppyglobebysyaloni.netlify.app/",
     code: "https://github.com/syaloni06/ShoppyGlobe",
     description: "ShoppyGlobe is a React-powered e-commerce app with seamless browsing, cart management, API integration, and optimized performance."
   },
   {
-    image: "src/assets/CalcForge Preview.jpg",
+    image: "src/assets/projects/CalcForge Preview.jpg",
     name: "CalcForge",
     preview: "https://calcforge.netlify.app/",
     code: "https://github.com/syaloni06/CalcForge",
     description: "CalcForge is a React-powered calculator builder app with drag-and-drop customization, powered by Zustand and Tailwind for a seamless experience."
   },
   {
-    image: "src/assets/Skycast Preview.jpg",
+    image: "src/assets/projects/Skycast Preview.jpg",
     name: "SkyCast",
     preview: "https://syaloni06.github.io/Weather_Forcast_Application/",
     code: "https://github.com/syaloni06/Weather_Forcast_Application",
@@ -48,7 +48,7 @@ const Projects = ({ refProp }) => {
     >
       <h2 className="text-5xl flex gap-4 italic bg-gradient-to-r justify-center p-4 from-sky-500 to-blue-800 font-bold bg-clip-text text-transparent">
         <MdOutlineWork className="self-end text-black dark:text-white" />
-        My Projects
+        My Project Works
       </h2>
       <div className="flex flex-wrap gap-10 justify-center mx-36 z-40">
         {projects.map(({ image, name, preview, code, description }, index) => {
