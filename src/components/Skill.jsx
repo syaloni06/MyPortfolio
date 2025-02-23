@@ -34,20 +34,19 @@ const skills = [
 
 const Skill = ({ refProp }) => {
   return (
-    <div className="h-screen flex flex-col gap-8 items-center justify-center dark:bg-black z-40">
+    <div className="h-screen flex flex-col items-center justify-center dark:bg-black z-40">
+      <h2 className="text-5xl flex gap-4 italic bg-gradient-to-r pt-20 from-sky-500 to-blue-800 font-bold bg-clip-text text-transparent z-40">
+        <FaLaptopCode className="self-end text-black dark:text-white" />
+        Skills & Abilities
+      </h2>
       <motion.div
         ref={refProp}
-        className="h-screen flex flex-col gap-8 items-center justify-center dark:bg-black"
+        className="h-screen flex flex-col items-center justify-center"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: false, amount: 0.2 }}
       >
-        <h2 className="text-5xl flex gap-4 italic bg-gradient-to-r from-sky-500 to-blue-800 font-bold bg-clip-text text-transparent z-40">
-          <FaLaptopCode className="self-end text-black dark:text-white" />
-          Skills & Abilities
-        </h2>
-
         <motion.div
           className="flex flex-wrap justify-center gap-6 p-8 bg-gradient-to-r from-sky-200 to-blue-400 dark:from-sky-800 dark:to-blue-950 rounded-xl shadow-lg w-3/5"
           initial="hidden"

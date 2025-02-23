@@ -92,7 +92,7 @@ const Certification = ({ refProp }) => {
             className="bg-gradient-to-r from-sky-400 to-blue-700 dark:from-sky-800 dark:to-blue-950 rounded-lg p-2 shadow-lg w-60 cursor-pointer z-40"
             variants={itemVariants} // Staggered Animation on Scroll
             whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.1 }}
             onClick={() => setSelectedCert(cert)}
           >
             <img
